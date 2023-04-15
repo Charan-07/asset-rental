@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asset Rental System</title>
+	<style>
+		body {
+    font-family: Arial, sans-serif;
+	background-color: rgb(11, 11, 11);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    display: block;
+    width: 475px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+select{
+    display: block;
+    width: 494px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button[type="button"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="button"]:hover {
+    background-color: #3e8e41;
+}
+	</style>
+</head>
+<body>
+	<h1>Asset Rental System</h1>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" placeholder="Enter Name"><br><br>
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" placeholder="Enter Email Id"><br><br>
+		
+		<label for="asset">Asset:</label>
+		<select id="asset">
+			<option value="" disabled selected>Select your option</option>
+			<option value="laptop">Laptop</option>
+			<option value="camera">Camera</option>
+			<option value="phone">Phone</option>
+		</select><br><br>
+		
+		<label for="date">Date:</label>
+		<input type="date" id="date" placeholder="Enter Date"><br><br>
+		
+		<button type="button" onclick="rentAsset()">Rent Asset</button>
+	</form>
+	
+	<script>
+		function rentAsset() {
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var asset = document.getElementById('asset').value;
+			var date = document.getElementById('date').value;
+			
+			window.alert('Your request has been sent');
+		}
+	</script>
+</body>
+</html>
